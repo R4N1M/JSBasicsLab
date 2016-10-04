@@ -53,6 +53,13 @@ var somme=0;
 };
 
 export const reverseString = (str) => {
+ var i;
+  let revstr='';
+  for(i=str.length-1;i>=0;i--)
+  {
+    revstr += str[i];
+  }
+  return revstr ;
   // str will be an string
   // Return a new string who's characters are in the opposite order to str's.
 };

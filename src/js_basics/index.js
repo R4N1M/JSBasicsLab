@@ -12,6 +12,14 @@ if(i%2 === 0)
 };
 
 export const getFileExtension = (str) => {
+var arraystr=str.split('.');
+  if(arraystr.length === 1)
+  {
+    return false;
+  }else
+  {
+    return arraystr[arraystr.length-1];
+  }
   // str will be a string, but it may not have a file extension.
   // Return the file extension (with no period) if it has one, otherwise false
 };

@@ -25,6 +25,29 @@ var arraystr=str.split('.');
 };
 
 export const longestString = (arr) => {
+var somme=0;
+  var index=0;
+  var compteur=0; //le nombre des numeros trouvés dans le tableau
+  for(let i=0;i<arr.length;i++)
+  {
+    if(typeof arr[i] === 'string')
+    {
+      if(somme < arr[i].length)
+      {
+        somme = arr[i].length;
+        index=i;
+      }
+    }
+    else{
+      compteur++;
+    }
+  }
+  if(compteur !== arr.length)
+  {
+    return arr[index];
+  }else {
+    return '';
+  }
   // arr will be an array.
   // Return the longest string in the array
 };

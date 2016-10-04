@@ -65,6 +65,17 @@ export const reverseString = (str) => {
 };
 
 export const isPalindrome = (str) => {
+ var i;
+  str = str.toLowerCase();
+  var revstr=reverseString(str);
+  for(i=0;i<str.length;i++)
+  {
+    if(str[i] !== revstr[i])
+    {
+      return false;
+    }
+  }
+  return true;
   // str will be an string
   // Return true if it is a palindrome and false otherwise.
   // It should be case insensitive and not consider space or punctuation.
